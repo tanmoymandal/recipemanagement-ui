@@ -1,5 +1,11 @@
 # Recipe Management Client
 
+[![React](https://img.shields.io/badge/React-18.2.0-blue.svg)](https://reactjs.org/)
+[![TypeScript](https://img.shields.io/badge/TypeScript-4.9.5-blue.svg)](https://www.typescriptlang.org/)
+[![GraphQL](https://img.shields.io/badge/GraphQL-16.6.0-pink.svg)](https://graphql.org/)
+[![Material-UI](https://img.shields.io/badge/Material--UI-5.13.0-blue.svg)](https://mui.com/)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+
 This is a React-based frontend for the Recipe Management System, designed to work with a GraphQL API built with Spring Boot.
 
 ## Features
@@ -30,17 +36,17 @@ recipe-management-client/
 │   ├── index.html
 │   └── ...
 ├── src/
-│   ├── apollo.js             # Apollo Client configuration
-│   ├── App.js                # Main application component
+│   ├── apollo.ts             # Apollo Client configuration
+│   ├── App.tsx               # Main application component
 │   ├── App.css               # Application styles
-│   ├── index.js              # Entry point
+│   ├── index.tsx             # Entry point
 │   ├── index.css             # Global styles
 │   ├── components/           # React components
-│   │   ├── RecipeList.js     # List of all recipes
-│   │   ├── RecipeDetail.js   # Detailed view of a recipe
-│   │   └── AddRecipe.js      # Form to add a new recipe
+│   │   ├── RecipeList.tsx    # List of all recipes
+│   │   ├── RecipeDetail.tsx  # Detailed view of a recipe
+│   │   └── AddRecipe.tsx     # Form to add a new recipe
 │   └── graphql/              # GraphQL queries and mutations
-│       └── queries.js        # All GraphQL operations
+│       └── queries.ts        # All GraphQL operations
 ├── package.json
 └── README.md
 ```
@@ -67,4 +73,4 @@ This frontend is designed to connect to a GraphQL API running at `http://localho
 ## Notes
 
 - This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
-- The backend implementation details can be found in the corresponding Spring Boot project.
+- The backend implementation details can be found in the corresponding Spring Boot project. [recipemanagement](https://github.com/tanmoymandal/recipemanagement)
