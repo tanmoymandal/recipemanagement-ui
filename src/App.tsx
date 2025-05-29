@@ -1,25 +1,31 @@
+// src/App.js
 import React from 'react';
-import logo from './logo.svg';
+import { Routes, Route, Link } from 'react-router-dom';
+import { AppBar, Toolbar, Typography, Container, CssBaseline } from '@mui/material';
+import RecipeList from './components/RecipeList';
+import RecipeDetail from './components/RecipeDetail';
+import AddRecipe from './components/AddRecipe';
 import './App.css';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <CssBaseline />
+      <AppBar position="static">
+        <Toolbar>
+          <Typography variant="h6" component={Link} to="/" sx={{ textDecoration: 'none', color: 'white' }}>
+            Recipe Management System
+          </Typography>
+        </Toolbar>
+      </AppBar>
+      <Container sx={{ mt: 4, mb: 4 }}>
+        <Routes>
+          <Route path="/" element={<RecipeList />} />
+          <Route path="/recipe/:id" element={<RecipeDetail />} />
+          <Route path="/add-recipe" element={<AddRecipe />} />
+        </Routes>
+      </Container>
+    </>
   );
 }
 
